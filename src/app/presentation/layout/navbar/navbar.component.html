@@ -1,0 +1,7 @@
+<nav>
+  <div *ngFor="let item of items">
+    <div [routerLink]="[item.path]" routerLinkActive="selected">
+      <span>{{ item.text }}</span>
+    </div>
+  </div>
+</nav>
