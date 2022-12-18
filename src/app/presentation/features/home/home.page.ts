@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ICar } from '@core/interfaces/car.interface';
-import { CARS } from '@data/mocks/cars.mock';
+import { HomeFacade } from '@facade/home/home.facade';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +9,14 @@ import { CARS } from '@data/mocks/cars.mock';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-  public items!: ICar[];
+  public isLoading$!: Observable<boolean>;
+  public carList$!: Observable<ICar[]>;
 
-  constructor() {}
+  constructor(private _homeFacade: HomeFacade) {}
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this.items = CARS;
-    }, 1000);
+    this.isLoading$ = this._homeFacade.isLoading$;
+    this.carList$ = this._homeFacade.carList$;
+    this._homeFacade.onInitHome();
   }
 }

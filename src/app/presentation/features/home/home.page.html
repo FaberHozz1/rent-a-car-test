@@ -7,9 +7,9 @@
       <input class="input" placeholder="Search by brand" />
     </div>
     <div class="home__catalog__container">
-      <ng-container *ngIf="items; else loader">
+      <ng-container *ngIf="!(isLoading$ | async); else loader">
         <layout-card
-          *ngFor="let item of items"
+          *ngFor="let item of (carList$ | async)"
           [photo]="item.photo"
           [brand]="item.brand"
           [name]="item.name"

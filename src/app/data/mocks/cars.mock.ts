@@ -39,4 +39,4 @@ const AUTOS: ICar[] = [
   },
 ];
 
-export const CARS: ICar[] = [...AUTOS, ...AUTOS.reverse()];
+export const MOCK_CARS: ICar[] = [...AUTOS, ...AUTOS.reverse()];
