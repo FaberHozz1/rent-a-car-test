@@ -1,0 +1,25 @@
+<section class="home">
+  <div class="home__catalog">
+    <h1 class="home__catalog__title">
+      Alquilar un carro nunca ha sido tan fácil
+    </h1>
+    <div class="home__catalog__filters">
+      <input class="input" placeholder="Search by brand" />
+    </div>
+    <div class="home__catalog__container">
+      <ng-container *ngIf="items; else loader">
+        <layout-card
+          *ngFor="let item of items"
+          [photo]="item.photo"
+          [brand]="item.brand"
+          [name]="item.name"
+          [price]="item.price"
+        ></layout-card>
+      </ng-container>
+    </div>
+  </div>
+</section>
+
+<ng-template #loader>
+  <div>cargando...</div>
+</ng-template>

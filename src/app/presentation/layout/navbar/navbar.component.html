@@ -1,0 +1,11 @@
+<nav class="navbar">
+  <ng-container *ngFor="let item of items">
+    <div
+      class="navbar__item"
+      [routerLink]="[item.path]"
+      routerLinkActive="selected"
+    >
+      <span>{{ item.text }}</span>
+    </div>
+  </ng-container>
+</nav>

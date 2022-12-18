@@ -1,0 +1,48 @@
+@import "colors";
+@import "fonts";
+
+.home {
+  padding: 25px;
+  border-radius: 15px;
+  padding: 25px;
+  width: calc(100% - 50px);
+  background: white;
+
+  &__catalog {
+    &__title {
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      padding: 71px;
+      background: url(//static.rentcars.com/imagens/modules/localidade/bgs/rent-cars.jpg);
+    }
+  }
+  &__catalog {
+    &__filters {
+      background: #264653;
+      padding: 30px;
+    }
+    .input {
+      padding: 5px 16px;
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+      border-radius: 8px;
+      font-size: 1.5rem;
+
+      &::placeholder {
+        color: white;
+        opacity: 0.8;
+      }
+    }
+  }
+  &__catalog {
+    &__container {
+      display: grid;
+      gap: 25px;
+      grid-auto-rows: minmax(100px, auto);
+      grid-gap: 10px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
