@@ -1,6 +1,8 @@
 @import "assets/scss";
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&display=swap");
 
 body {
-  background-color: $color-5;
-  color: white;
+  margin: 0;
+  font-family: "Oxygen", Arial, Helvetica, sans-serif;
+  font-size: 20px;
 }
