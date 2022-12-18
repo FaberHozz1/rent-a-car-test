@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ICar } from '@core/interfaces/car.interface';
+import { IFilters } from '@core/interfaces/home.interface';
 import { HomeFacade } from '@facade/home/home.facade';
 import { Observable } from 'rxjs';
 
@@ -18,5 +19,10 @@ export class HomePage implements OnInit {
     this.isLoading$ = this._homeFacade.isLoading$;
     this.carList$ = this._homeFacade.carList$;
     this._homeFacade.onInitHome();
+  }
+
+  public onChangeFilters({ term, sortBy }: IFilters): void {
+    console.log('---> term: ', term);
+    console.log('---> sortBy: ', sortBy);
   }
 }

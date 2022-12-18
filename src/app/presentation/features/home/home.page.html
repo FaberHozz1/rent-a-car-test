@@ -3,18 +3,14 @@
     <h1 class="home__catalog__title">
       Alquilar un carro nunca ha sido tan fácil
     </h1>
-    <div class="home__catalog__filters">
-      <input class="input" placeholder="Search by brand" />
-    </div>
+    <home-filters (filters)="onChangeFilters($event)"></home-filters>
     <div class="home__catalog__container">
       <ng-container *ngIf="!(isLoading$ | async); else loader">
-        <layout-card
-          *ngFor="let item of (carList$ | async)"
-          [photo]="item.photo"
-          [brand]="item.brand"
-          [name]="item.name"
-          [price]="item.price"
-        ></layout-card>
+        <ng-container *ngIf="(carList$ | async) as carList">
+          <ng-container
+            *ngTemplateOutlet="success; context: {carList}"
+          ></ng-container>
+        </ng-container>
       </ng-container>
     </div>
   </div>
@@ -22,4 +18,20 @@
 
 <ng-template #loader>
   <div>cargando...</div>
+</ng-template>
+
+<ng-template #success let-carList="carList">
+  <ng-container *ngIf="!!(carList?.length); else empty">
+    <layout-card
+      *ngFor="let item of carList"
+      [photo]="item.photo"
+      [brand]="item.brand"
+      [name]="item.name"
+      [price]="item.price"
+    ></layout-card>
+  </ng-container>
+</ng-template>
+
+<ng-template #empty>
+  <div>Vacio</div>
 </ng-template>
