@@ -7,28 +7,19 @@
       <input class="input" placeholder="Search by brand" />
     </div>
     <div class="home__catalog__container">
-      <div class="item">
-        <img class="item__image" src="/assets/img/dodge.png" />
-        <div class="item__content">
-          <h2 class="item__content__title">Dodge Charger</h2>
-          <p class="item__content__p">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
-          </p>
-          <button class="item__content__button">Rent for: $50.000</button>
-        </div>
-      </div>
-      <div class="item">
-        <img class="item__image" src="/assets/img/dodge.png" />
-        <div class="item__content">
-          <h2 class="item__content__title">Dodge Charger</h2>
-          <p class="item__content__p">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
-          </p>
-          <button class="item__content__button">Rent for: $50.000</button>
-        </div>
-      </div>
+      <ng-container *ngIf="items; else loader">
+        <layout-card
+          *ngFor="let item of items"
+          [photo]="item.photo"
+          [brand]="item.brand"
+          [name]="item.name"
+          [price]="item.price"
+        ></layout-card>
+      </ng-container>
     </div>
   </div>
 </section>
+
+<ng-template #loader>
+  <div>cargando...</div>
+</ng-template>
