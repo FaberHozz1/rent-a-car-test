@@ -5,7 +5,7 @@ const AUTOS: ICar[] = [
     brand: 'Dodge',
     model: '2022',
     name: 'Charger',
-    photo: '/assets/img/dodge.png',
+    photo: './assets/img/dodge.png',
     price: '10000',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
@@ -41,7 +41,7 @@ const AUTOS: ICar[] = [
     brand: 'Dodge',
     model: '2018',
     name: 'Charger',
-    photo: '/assets/img/dodge.png',
+    photo: './assets/img/dodge.png',
     price: '50000',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
@@ -50,7 +50,7 @@ const AUTOS: ICar[] = [
     brand: 'Audi',
     model: '2017',
     name: 'RS7',
-    photo: '/assets/img/audi.png',
+    photo: './assets/img/audi.png',
     price: '60000',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
@@ -59,7 +59,7 @@ const AUTOS: ICar[] = [
     brand: 'Audi',
     model: '2016',
     name: 'RS7',
-    photo: '/assets/img/audi_rs.png',
+    photo: './assets/img/audi_rs.png',
     price: '70000',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
@@ -68,7 +68,7 @@ const AUTOS: ICar[] = [
     brand: 'Range Rover',
     model: '2015',
     name: 'Velar',
-    photo: '/assets/img/suv.png',
+    photo: './assets/img/suv.png',
     price: '80000',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
