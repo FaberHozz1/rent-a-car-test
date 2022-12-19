@@ -9,13 +9,15 @@ import { Injectable } from '@angular/core';
 import { ServerMock } from '@core/services/app-serve.mock';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { MockBackendService } from './mock-backend.service';
 
 @Injectable()
 export class AppMockInterceptorService implements HttpInterceptor {
   private _localServer: ServerMock;
 
   constructor() {
-    this._localServer = new ServerMock();
+    const _MockBackendService = new MockBackendService();
+    this._localServer = new ServerMock(_MockBackendService);
   }
 
   intercept(

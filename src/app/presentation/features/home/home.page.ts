@@ -21,8 +21,7 @@ export class HomePage implements OnInit {
     this._homeFacade.onInitHome();
   }
 
-  public onChangeFilters({ term, sortBy }: IFilters): void {
-    console.log('---> term: ', term);
-    console.log('---> sortBy: ', sortBy);
+  public onChangeFilters(filters: IFilters): void {
+    this._homeFacade.updateHomeFilters(filters);
   }
 }

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ICar } from '@core/interfaces/car.interface';
+import { IFilters } from '@core/interfaces/home.interface';
 import * as carActions from '@domain/store/car/car.actions';
 import * as carSelectors from '@domain/store/car/car.selectors';
 import { Store } from '@ngrx/store';
@@ -19,8 +20,8 @@ export class HomeFacade {
     this._store.dispatch(carActions.initCarList());
   }
 
-  public getHomeItems(): void {
-    // this._store.dispatch(appActions.updateMenuItems());
+  public updateHomeFilters(filters: IFilters): void {
+    this._store.dispatch(carActions.updateCarListFilters({ filters }));
   }
 
   public onCloseSession(): void {

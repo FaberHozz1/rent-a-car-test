@@ -29,6 +29,14 @@
       font-size: $font-size-large;
       text-align: center;
     }
+    &__description {
+      color: $color-5;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: $font-size-small;
+      text-align: center;
+    }
     &__button {
       margin-top: 10px;
       -webkit-appearance: none;
