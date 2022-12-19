@@ -1,0 +1,16 @@
+@import "fonts";
+
+.custom-select {
+  background: transparent;
+  border-radius: 8px;
+  border: 2px solid white;
+  color: white;
+  font-size: $font-size-medium;
+  outline: none;
+  padding: 5px 16px;
+
+  &::placeholder {
+    color: white;
+    opacity: 0.8;
+  }
+}

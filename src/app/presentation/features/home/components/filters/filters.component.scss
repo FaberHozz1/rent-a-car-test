@@ -3,19 +3,6 @@
 .filters {
   background: #264653;
   padding: 30px;
-
-  &__input {
-    background: transparent;
-    border-radius: 8px;
-    border: 2px solid white;
-    color: white;
-    font-size: $font-size-medium;
-    outline: none;
-    padding: 5px 16px;
-
-    &::placeholder {
-      color: white;
-      opacity: 0.8;
-    }
-  }
+  display: flex;
+  gap: 20px;
 }

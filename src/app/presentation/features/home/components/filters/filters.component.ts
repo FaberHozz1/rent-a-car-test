@@ -6,6 +6,7 @@ import {
   Output,
 } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ISelectOption } from '@core/interfaces/forms.interface';
 import { IFilters } from '@core/interfaces/home.interface';
 import { debounceTime, Subscription } from 'rxjs';
 
@@ -15,6 +16,20 @@ import { debounceTime, Subscription } from 'rxjs';
   styleUrls: ['./filters.component.scss'],
 })
 export class FiltersComponent implements OnInit, OnDestroy {
+  public sortOptions: ISelectOption[] = [
+    {
+      text: 'Brand',
+      value: 'brand',
+    },
+    {
+      text: 'Model',
+      value: 'model',
+    },
+    {
+      text: 'Price',
+      value: 'price',
+    },
+  ];
   public form!: FormGroup;
 
   @Output() filters: EventEmitter<IFilters>;

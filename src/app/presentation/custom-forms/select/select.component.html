@@ -1,0 +1,10 @@
+<select
+  class="custom-select"
+  name="select"
+  [(ngModel)]="value"
+  [disabled]="isDisabled"
+>
+  <ng-container *ngFor="let option of options">
+    <option [value]="option?.value">{{ option?.text }}</option>
+  </ng-container>
+</select>

@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CustomFormsModule } from '@presentation/custom-forms/custom-forms.module';
 
 import { LayoutModule } from '@presentation/layout/layout.module';
 import { FiltersComponent } from './components/filters/filters.component';
@@ -14,6 +15,7 @@ import { HomePage } from './home.page';
     CommonModule,
     HomeRoutingModule,
     LayoutModule,
+    CustomFormsModule,
     ReactiveFormsModule,
     FormsModule,
   ],

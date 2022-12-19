@@ -1,24 +1,22 @@
 <form [formGroup]="form" class="filters">
-  <input
+  <custom-input
     formControlName="term"
-    class="filters__input"
     placeholder="Search by brand"
-  />
-  <select name="select" formControlName="sortBy">
-    <option value="value1">Value 1</option>
-    <option value="value2" selected>Value 2</option>
-    <option value="value3">Value 3</option>
-  </select>
+  ></custom-input>
+  <custom-select
+    formControlName="sortBy"
+    [options]="sortOptions"
+  ></custom-select>
 </form>
 
 <!-- 
 TODO:
-Hacer un componente para el Input
-hacer un componente para el select
+
 hacer el loader
 hacer el responsive
 hacer el mock response del filtro
 Intentar implementar un paginado
 Hacer el modal
 Agregar animaciones css o animation
+mover el navbar al state
 -->
