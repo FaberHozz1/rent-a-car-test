@@ -9,7 +9,7 @@
 
   &__header {
     &__title {
-      background: url(./assets/img/banner.png);
+      background-image: url("~src/assets/img/banner.png");
       background-repeat: no-repeat;
       background-size: cover;
       color: $color-0;
