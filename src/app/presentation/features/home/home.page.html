@@ -4,20 +4,20 @@
       Alquilar un carro nunca ha sido tan fácil
     </h1>
     <home-filters (filters)="onChangeFilters($event)"></home-filters>
-    <div class="home__catalog__container">
-      <ng-container *ngIf="!(isLoading$ | async); else loader">
+    <ng-container *ngIf="!(isLoading$ | async); else loader">
+      <div class="home__catalog__container">
         <ng-container *ngIf="(carList$ | async) as carList">
           <ng-container
             *ngTemplateOutlet="success; context: {carList}"
           ></ng-container>
         </ng-container>
-      </ng-container>
-    </div>
+      </div>
+    </ng-container>
   </div>
 </section>
 
 <ng-template #loader>
-  <div>cargando...</div>
+  <home-loader></home-loader>
 </ng-template>
 
 <ng-template #success let-carList="carList">
