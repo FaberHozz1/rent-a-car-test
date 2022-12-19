@@ -1,9 +1,13 @@
 <section class="home">
-  <div class="home__catalog">
-    <h1 class="home__catalog__title">
+  <div class="home__header">
+    <h1 class="home__header__title">
       Alquilar un carro nunca ha sido tan fácil
     </h1>
-    <home-filters (filters)="onChangeFilters($event)"></home-filters>
+    <div class="home__header__filters">
+      <home-filters (filters)="onChangeFilters($event)"></home-filters>
+    </div>
+  </div>
+  <div class="home__catalog">
     <ng-container *ngIf="!(isLoading$ | async); else loader">
       <div class="home__catalog__container">
         <ng-container *ngIf="(carList$ | async) as carList">

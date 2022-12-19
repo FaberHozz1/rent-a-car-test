@@ -1,9 +1,13 @@
+<label for="select">{{ label }}</label>
 <select
   class="custom-select"
   name="select"
   [(ngModel)]="value"
   [disabled]="isDisabled"
 >
+  <option selected disabled value="">
+    {{ placeholder }}
+  </option>
   <ng-container *ngFor="let option of options">
     <option [value]="option?.value">{{ option?.text }}</option>
   </ng-container>

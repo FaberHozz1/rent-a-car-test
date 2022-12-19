@@ -16,6 +16,8 @@ import { ISelectOption } from '@core/interfaces/forms.interface';
 })
 export class SelectComponent implements ControlValueAccessor {
   @Input() options!: ISelectOption[];
+  @Input() placeholder!: string;
+  @Input() label!: string;
   public isDisabled: boolean = false;
   public onChange: any = () => {};
   public onTouch: any = () => {};

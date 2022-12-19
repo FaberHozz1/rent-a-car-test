@@ -1,27 +1,62 @@
 @import "colors";
 @import "fonts";
+@import "breakpoints";
+@import "mixins";
 
 .home {
-  padding: 25px;
   border-radius: 15px;
-  padding: 25px;
-  width: calc(100% - 50px);
-  background: white;
+  background: $color-0;
+
+  &__header {
+    &__title {
+      background: url(/assets/img/banner.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: $color-0;
+      font-weight: bold;
+      padding: 40px 0 0 0;
+      text-align: center;
+      min-height: 150px;
+    }
+
+    &__filters {
+      margin: -50px 0 0 40px;
+    }
+  }
 
   &__catalog {
-    &__title {
-      color: white;
-      font-weight: bold;
-      text-align: center;
-      padding: 71px;
-      background: url(//static.rentcars.com/imagens/modules/localidade/bgs/rent-cars.jpg);
-    }
+    padding: 50px 108px;
     &__container {
       display: grid;
       gap: 25px;
       grid-auto-rows: minmax(100px, auto);
       grid-gap: 10px;
       grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @include to(tablet) {
+    &__catalog {
+      padding: 30px 50px;
+      &__container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+  @include to(mobile-l) {
+    &__header {
+      &__title {
+        font-size: $font-size-extra-large;
+      }
+      &__filters {
+        margin: -50px 40px 0 40px;
+      }
+    }
+    &__catalog {
+      padding: 30px 17px;
+      &__container {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   }
 }

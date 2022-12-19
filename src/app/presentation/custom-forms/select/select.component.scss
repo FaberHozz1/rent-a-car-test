@@ -1,16 +1,23 @@
 @import "fonts";
+@import "colors";
 
+label {
+  font-size: $font-size-extra-small;
+  line-height: 14px;
+  color: $color-5;
+}
 .custom-select {
   background: transparent;
   border-radius: 8px;
-  border: 2px solid white;
-  color: white;
+  border: 2px solid $color-1;
+  color: $color-1;
   font-size: $font-size-medium;
   outline: none;
   padding: 5px 16px;
+  width: 100%;
 
   &::placeholder {
-    color: white;
+    color: $color-1;
     opacity: 0.8;
   }
 }

@@ -1,3 +1,22 @@
 .base {
-  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.base > header {
+  grid-area: header;
+}
+
+.base > main {
+  grid-area: main;
+}
+
+.base > footer {
+  grid-area: footer;
 }
