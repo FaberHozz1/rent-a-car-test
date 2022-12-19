@@ -14,7 +14,7 @@ const AUTOS: ICar[] = [
     brand: 'Audi',
     model: '2021',
     name: 'RS7',
-    photo: '/assets/img/audi.png',
+    photo: './assets/img/audi.png',
     price: '20000',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
@@ -23,7 +23,7 @@ const AUTOS: ICar[] = [
     brand: 'Audi',
     model: '2020',
     name: 'RS7',
-    photo: '/assets/img/audi_rs.png',
+    photo: './assets/img/audi_rs.png',
     price: '30000',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
@@ -32,7 +32,7 @@ const AUTOS: ICar[] = [
     brand: 'Range Rover',
     model: '2019',
     name: 'Velar',
-    photo: '/assets/img/suv.png',
+    photo: './assets/img/suv.png',
     price: '40000',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
